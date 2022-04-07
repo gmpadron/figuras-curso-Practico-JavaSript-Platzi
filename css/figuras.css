@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-margin-top: 80px;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Mono', monospace;
+    margin: 10px auto;
+}
+
+p,
+a,
+span,
+b,
+i,
+li {
+    font-family: 'Roboto Mono', monospace;
+    margin: 2px auto;
+}
+
+input,
+button {
+    font-family: 'Roboto Mono', monospace;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+#page-0 {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 80px;
+    background-color: #3d97e2;
+    display: block;
+    position: sticky;
+    top: 0;
+    overflow-x: clip;
+    z-index: 10;
+}
+
+main {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+header .categorias-menu {
+    left: 100%;
+}
+
+/* Menu Mob */
+
+header .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    /* border: 3px solid #fff; */
+}
+
+header .menu p {
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+header .menu p::before,
+header .menu p::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+header .menu p::before {
+    transform: translateY(-16px);
+}
+
+header .menu p::after {
+    transform: translateY(16px);
+}
+
+/* ANIMATION */
+header .menu.active-menu p {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+header .menu.active-menu p::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+header .menu.active-menu p::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+header .categorias-menu.active-menu {
+    left: 0;
+}
+
+header .content-header {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+header .categorias-menu {
+    position: absolute;
+    top: 80px;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background: #44a2f1;
+    transition: all 0.3s ease-in-out;
+}
+
+header .categorias-menu nav {
+    text-align: center;
+}
+
+header .categorias-menu nav ul li {
+    margin: 30px 0;
+    list-style: none;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+}
+
+header .categorias-menu nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* END Menu Mob */
+
+main scroll-page>section {
+    height: calc(100vh - 80px);
+    position: relative;
+    width: 80vw;
+    display: block;
+    margin: 0 auto;
+}
+
+main scroll-page>section>div {
+    top: 50%;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 80vw;
+}
+
+.title-page-top h1 {
+    text-decoration: underline;
+    font-size: 1.6em;
+}
+
+.cual-figura>div>div a span {
+    font-size: 25px;
+    color: black;
+}
+
+.cual-figura>div>div a img {
+    display: block;
+    max-width: 50px;
+}
+
+.cual-figura>div>div a {
+    display: flex;
+    align-content: center;
+    margin: 50px 0;
+    flex-direction: column-reverse;
+    text-decoration: none;
+    text-align: center;
+}
+
+.figura-formula input {
+    border: 1px solid #000;
+    margin: 10px 5px;
+    margin-left: 0;
+    padding: 2px 10px;
+}
+
+.figura-formula .btn-go {
+    background: none;
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) {
+
+    header .menu {
+        display: none;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    main scroll-page {
+        width: 300px;
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .title-page-top>p {
+        display: none;
+    }
+
+    .cual-figura>div {
+        display: flex;
+        width: max-content;
+        justify-content: center;
+    }
+
+    .cual-figura>div>div {
+        margin: 0 30px;
+    }
+
+
+    section.index-figuras {
+        width: max-content;
+        text-align: center;
+    }
+
+    main scroll-page>.index-figuras>div {
+        width: auto;
+    }
+
+
+
+    main scroll-page>section {
+        width: 300px;
+        height: auto;
+    }
+
+
+    main scroll-page>section>div {
+        width: 300px;
+        top: auto;
+        left: auto;
+        margin-right: auto;
+        transform: initial;
+        position: relative;
+    }
+
+    .todas-figuras {
+        display: flex;
+        max-width: 90vw;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+}
