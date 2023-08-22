@@ -64,15 +64,17 @@ function datosTriangulo() {
   
       $("#triangulo .resultado > *").remove();
         
-      var ladoTriangulo = $("#ladoTriangulo").val();
-      var ladoTrianguloBase = $("#ladoTrianguloBase").val();
+      var ladoTrianguloOne = $("#ladoTrianguloOne").val();
+      var ladoTrianguloTwo = $("#ladoTrianguloTwo").val();
+      var ladoTrianguloThree = $("#ladoTrianguloThree").val();
   
-      // console.log("Un lado del triangulo : " + ladoTriangulo);
-      // console.log("Base del triangulo: " + ladoTrianguloBase);
+      // console.log("Un lado del triangulo : " + ladoTrianguloOne);
+      // console.log("Un lado del triangulo : " + ladoTrianguloOne);
+      // console.log("Base del triangulo: " + ladoTrianguloThree);
   
       function perimetroTriangulo() {
         var medida = "cm";
-        var perimetroTriangulo = (Number(ladoTriangulo) * 2) + Number(ladoTrianguloBase);
+        var perimetroTriangulo = Number(ladoTrianguloOne) + Number(ladoTrianguloTwo) + Number(ladoTrianguloThree);
         console.log("Perimetro: " + perimetroTriangulo);
         $("#triangulo .resultado").prepend("<b>Perimetro: </b><p>" + perimetroTriangulo + " " + medida + "</p>");
       }
@@ -80,9 +82,9 @@ function datosTriangulo() {
       function areaTriangulo() {
         var medida = "cm&#178;";
 
-        var alturaTriangulo = Number((Number(ladoTriangulo) ** 2) - (Number(ladoTrianguloBase / 2) ** 2)) ** (1/2);
+        var alturaTriangulo = Number((Number(ladoTrianguloOne) + Number(ladoTrianguloTwo) + Number(ladoTrianguloThree)) / 2);
          console.log("Altura Triangulo: " + alturaTriangulo);
-        var areaTriangulo = (ladoTrianguloBase * alturaTriangulo) / 2;
+        var areaTriangulo = Number(Math.sqrt(alturaTriangulo * (alturaTriangulo - Number(ladoTrianguloOne)) * (alturaTriangulo - Number(ladoTrianguloTwo)) * (alturaTriangulo - Number(ladoTrianguloThree))));
         console.log("Area: " + areaTriangulo);
         $("#triangulo .resultado").prepend("<b>Area: </b><p>" + areaTriangulo + " " + medida + "</p>");
       }

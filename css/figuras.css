@@ -160,6 +160,13 @@ header .categorias-menu nav ul li a {
 
 /* END Menu Mob */
 
+main scroll-page{
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 main scroll-page>section {
     height: calc(100vh - 80px);
     position: relative;
@@ -210,6 +217,14 @@ main scroll-page>section>div {
 
 .figura-formula .btn-go {
     background: none;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+
+.figura-formula .btn-go:hover {
+    color:#fff;
+    background: #3d97e2;
+    border-color: #3d97e2;
 }
 
 /* Tablet */
@@ -225,9 +240,9 @@ main scroll-page>section>div {
     }
 
     main scroll-page {
-        width: 300px;
+        max-width: 300px;
         padding: 20px;
-        margin: 20px 0;
+        margin: 20px auto;
     }
 
     .title-page-top>p {
@@ -277,6 +292,4 @@ main scroll-page>section>div {
         flex-wrap: wrap;
         justify-content: center;
     }
-
-
 }

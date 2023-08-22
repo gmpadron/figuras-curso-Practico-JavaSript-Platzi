@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figuras Geometricas | Curso JavaScript Platz</title>
+  <link rel="stylesheet" href="./css/figuras.css" />
+</head>
+
+<body>
+  <div id="page-0"></div>
+  <header>
+    <div class="content-header">
+      <div class="menu">
+        <p></p>
+      </div>
+      <div class="categorias-menu">
+        <nav>
+          <ul>
+            <li><a href="#page-0">Top Page</a></li>
+            <li><a href="#page-1">Cuadrado</a></li>
+            <li><a href="#page-2">Triángulo<br />de lados conocidos</a></li>
+            <li><a href="#page-3">Circulo</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <scroll-container>
+      <scroll-page>
+        <section class="index-figuras">
+          <div class="selecciona-figura">
+            <div class="title-page-top">
+              <h1>Figuras geometricas</h1>
+              <p>Seleccione una figura</p>
+            </div>
+            <div class="cual-figura">
+              <div>
+                <div>
+                  <a href="#page-1"><span>Cuadrado</span><img src="./image/cuadrado.png" alt="cuadrado" /></a>
+                </div>
+                <div>
+                  <a href="#page-2"><span>Triángulo <br />
+                    de lados conocidos</span><img src="./image/triangulo.png" alt="triangulo" /></a>
+                </div>
+                <div>
+                  <a href="#page-3"><span>Circulo</span><img src="./image/circulo.png" alt="circulo" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </scroll-page>
+      <div class="todas-figuras">
+        <scroll-page id="page-1">
+          <section class="figura" id="cuadrado">
+            <div class="content-figura">
+              <h2>Cuadrado</h2>
+              <div class="img-figura">
+                <img src="./image/cuadrado.png" alt="" />
+              </div>
+              <div class="figura-formula">
+                <h3>Datos del cuadrado</h3>
+                <div>
+                  <p>Ingrese el tamaño de un lado del cuadrado en cm</p>
+                  <input id="ladoCuadrado" type="number" placeholder="0" value="" />
+                  <input class="btn-go" id="botaoCuadrado" type="submit" value="Go!" />
+                  <div class="resultado">
+                    <b>Perimetro: </b>
+                    <p>0 cm</p>
+                    <b>Area: </b>
+                    <p>0 cm²</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </scroll-page>
+
+        <scroll-page id="page-2">
+          <section class="figura" id="triangulo">
+            <div class="content-figura">
+              <h2>Triángulo de lados conocidos</h2>
+              <div class="img-figura">
+                <img src="./image/triangulo.png" alt="" />
+              </div>
+              <div class="figura-formula">
+                <h3>Datos del triangulo</h3>
+                <div>
+                  <p>
+                    Ingrese el tamaño de los lados del triangulo isóceles en
+                    cm
+                  </p>
+                  <input id="ladoTrianguloOne" type="number" placeholder="Lado 1" value="" />
+                  <input id="ladoTrianguloTwo" type="number" placeholder="Lado 2" value="" />
+                  <input id="ladoTrianguloThree" type="number" placeholder="Lado 3" value="" />
+                  <input class="btn-go" id="botaoTriangulo" type="submit" value="Go!" />
+                  <div class="resultado">
+                    <b>Perimetro: </b>
+                    <p>0 cm</p>
+                    <b>Area: </b>
+                    <p>0 cm²</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </scroll-page>
+
+        <scroll-page id="page-3">
+          <section class="figura" id="circulo">
+            <div class="content-figura">
+              <h2>Circulo</h2>
+              <div class="img-figura">
+                <img src="./image/circulo.png" alt="" />
+              </div>
+              <div class="figura-formula">
+                <h3>Datos del circulo</h3>
+                <div>
+                  <p>Ingrese el radio del circulo en cm</p>
+                  <input id="radioCirculo" type="number" placeholder="Radio" value="" />
+                  <input class="btn-go" id="botaoCirculo" type="submit" value="Go!" />
+                  <div class="resultado">
+                    <b>Perimetro: </b>
+                    <p>0 cm</p>
+                    <b>Area: </b>
+                    <p>0 cm²</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </scroll-page>
+      </div>
+    </scroll-container>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./js/figuras.js"></script>
+</body>
+
+</html>
