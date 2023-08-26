@@ -26,20 +26,20 @@ function datosCuadrados() {
 
     $("#cuadrado .resultado > *").remove();
       
-    var ladoCuadrado = $("#ladoCuadrado").val();
+    var ladoCuadrado = Number($("#ladoCuadrado").val());
 
     // console.log("Lado del cuadrado: " + ladoCuadrado);
 
     function perimetroCuadrado() {
       var medida = "cm";
-      var perimetroCuadrado = Number(ladoCuadrado) * 4;
+      var perimetroCuadrado = ladoCuadrado * 4;
       // console.log("Perimetro: " + perimetroCuadrado);
       $("#cuadrado .resultado").prepend("<b>Perimetro: </b><p>" + perimetroCuadrado + " " + medida + "</p>");
     }
 
     function areaCuadrado() {
       var medida = "cm&#178;";
-      var areaCuadrado = Number(ladoCuadrado) ** 2;
+      var areaCuadrado = ladoCuadrado ** 2;
       // console.log("Area: " + areaCuadrado);
       $("#cuadrado .resultado").prepend("<b>Area: </b><p>" + areaCuadrado + " " + medida + "</p>");
     }
@@ -64,9 +64,9 @@ function datosTriangulo() {
   
       $("#triangulo .resultado > *").remove();
         
-      var ladoTrianguloOne = $("#ladoTrianguloOne").val();
-      var ladoTrianguloTwo = $("#ladoTrianguloTwo").val();
-      var ladoTrianguloThree = $("#ladoTrianguloThree").val();
+      var ladoTrianguloOne = Number($("#ladoTrianguloOne").val());
+      var ladoTrianguloTwo = Number($("#ladoTrianguloTwo").val());
+      var ladoTrianguloThree = Number($("#ladoTrianguloThree").val());
   
       // console.log("Un lado del triangulo : " + ladoTrianguloOne);
       // console.log("Un lado del triangulo : " + ladoTrianguloOne);
@@ -74,7 +74,7 @@ function datosTriangulo() {
   
       function perimetroTriangulo() {
         var medida = "cm";
-        var perimetroTriangulo = Number(ladoTrianguloOne) + Number(ladoTrianguloTwo) + Number(ladoTrianguloThree);
+        var perimetroTriangulo = ladoTrianguloOne + ladoTrianguloTwo + ladoTrianguloThree;
         console.log("Perimetro: " + perimetroTriangulo);
         $("#triangulo .resultado").prepend("<b>Perimetro: </b><p>" + perimetroTriangulo + " " + medida + "</p>");
       }
@@ -82,9 +82,9 @@ function datosTriangulo() {
       function areaTriangulo() {
         var medida = "cm&#178;";
 
-        var alturaTriangulo = Number((Number(ladoTrianguloOne) + Number(ladoTrianguloTwo) + Number(ladoTrianguloThree)) / 2);
+        var alturaTriangulo = (ladoTrianguloOne + ladoTrianguloTwo + ladoTrianguloThree) / 2;
          console.log("Altura Triangulo: " + alturaTriangulo);
-        var areaTriangulo = Number(Math.sqrt(alturaTriangulo * (alturaTriangulo - Number(ladoTrianguloOne)) * (alturaTriangulo - Number(ladoTrianguloTwo)) * (alturaTriangulo - Number(ladoTrianguloThree))));
+        var areaTriangulo = Math.sqrt(alturaTriangulo * (alturaTriangulo - ladoTrianguloOne) * (alturaTriangulo - ladoTrianguloTwo) * (alturaTriangulo - ladoTrianguloThree));
         console.log("Area: " + areaTriangulo);
         $("#triangulo .resultado").prepend("<b>Area: </b><p>" + areaTriangulo + " " + medida + "</p>");
       }
@@ -106,20 +106,20 @@ function datosTriangulo() {
   
       $("#circulo .resultado > *").remove();
         
-      var radioCirculo = $("#radioCirculo").val();
+      var radioCirculo = Number($("#radioCirculo").val());
   
       // console.log("Radio del circulo: " + radioCirculo);
   
       function perimetroCirculo() {
         var medida = "cm";
-        var perimetroCirculo = 2 * Number(pi) * Number(radioCirculo);
+        var perimetroCirculo = 2 * Number(pi) * radioCirculo;
         // console.log("Perimetro: " + perimetroCirculo);
         $("#circulo .resultado").prepend("<b>Perimetro: </b><p>" + perimetroCirculo + " " + medida + "</p>");
       }
   
       function areaCirculo() {
         var medida = "cm&#178;";
-        var areaCirculo = Number(pi) * (Number(radioCirculo) ** 2);
+        var areaCirculo = Number(pi) * (radioCirculo ** 2);
         // console.log("Area: " + areaCirculo);
         $("#circulo .resultado").prepend("<b>Area: </b><p>" + areaCirculo + " " + medida + "</p>");
       }
